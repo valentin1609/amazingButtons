@@ -1,3 +1,171 @@
-h1 {
-    color: coral;
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #212121;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    position: sticky;
+    top: 0;
+    color: #ffffff;
+}
+
+aside {
+    float: left;
+    min-height: 100vh;
+    width: 15%;
+    min-width: 110px;
+    background-color: #212121;
+}
+.aside {
+    padding-top: 5px;
+    position: sticky;
+    top: 0;
+}
+
+.asideItem{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#selected{
+    padding-left: 40px;
+    color: #14FFEC;
+}
+#notSelected {
+    padding-left: 20px;
+    color: #0D7377;
+}
+#selectedMenu{
+    
+    color: #14FFEC;
+}
+#notSelectedMenu {
+    
+    color: #0D7377;
+}
+
+
+
+.title{
+    height: 30px;
+    background-color: #323232;
+    color: #ffffffaf;
+    display: flex;
+    align-items: flex-end;
+}
+.title p {
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+main{
+    width: 85%;
+    float: right;
+}
+.containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: #323232;
+    row-gap: 2px;
+    column-gap: 2px;
+}
+
+.container{
+height: 100px;
+width: 100%;
+background-color: #212121;
+}
+
+
+.menu {
+    display: none;
+}
+
+.asideMenu {
+    position: absolute;
+    background-color: #212121;
+    top: 70px;
+    width: 100%;
+    display: none;
+}
+
+.asideItemMenu {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    aside {
+        display: none;
+    }
+    main {
+        width: 100%;
+        float: none;
+    }    
+
+
+    .menu {
+        height: 20px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        right: 1%;
+        cursor: pointer;
+    }
+    
+        .menu span {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 2px;
+        }
+        
+        #line2x{
+            opacity: 0;
+        }
+        #line1x{
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            bottom: 50%; 
+           
+        }
+        #line3x{
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 50%;
+            
+        }
+
+
+
 }
